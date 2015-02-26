@@ -58,7 +58,7 @@ class PaginationDisplay (object):
 
     * A link to the next item, if `page` is not the last.
 
-    The value of X and Y can be set in the settings module, using the
+    The values of X and Y can be set in the settings module, using the
     attributes PAGINATION_DISPLAY_END_COUNT and
     PAGINATION_DISPLAY_NEAR_COUNT respectively.
 
@@ -91,6 +91,12 @@ class PaginationDisplay (object):
         """Returns a list of tuples representing the sequence of items to be
         displayed linking pages in the results, from the context of
         `page`.
+
+        Each tuple consists of a list of class names, the URL
+        destination (may be an empty string), the text, and the
+        title. There is no HTML markup present; the elements are
+        intended to be constructed into HTML (or even something else)
+        in a template.
 
         :param page: context page of a set of paginated results
         :type page: `django.core.paginator.Page`
