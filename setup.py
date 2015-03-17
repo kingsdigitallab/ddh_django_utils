@@ -7,6 +7,7 @@ setup(name='ddh_django_utils',
       url = 'https://github.com/kcl-ddh/ddh_django_utils',
       author = 'Jamie Norrish',
       author_email = 'jamie@artefact.org.nz',
+      license = 'Apache License, Version 2.0',
       packages = find_packages(),
       package_data = {
           'ddh_utils': ['templates/includes/*.html']
@@ -14,6 +15,7 @@ setup(name='ddh_django_utils',
       classifiers = [
           'Framework :: Django',
           'Intended Audience :: Developers',
+          'License :: OSI Approved :: Apache Software License',
           'Programming Language :: Python',
           'Programming Language :: Python :: 2',
           'Programming Language :: Python :: 2.6',
