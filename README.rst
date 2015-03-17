@@ -28,8 +28,8 @@ Haystack
 ``ddh_utils.views`` provides ``SearchView`` and ``FacetedSearchView``
 classes that have better pagination than those in Haystack's own views
 (making use of the ``create_pagination`` function), and also add the
-request's GET parameters to the context for use in pagination and
-facetting.
+request's GET parameters to the context (under the variable name
+``querydict``) for use in pagination and facetting.
 
 ``ddh_util_tags`` provides simple tags for creating URLs by adding and
 removing facets::
