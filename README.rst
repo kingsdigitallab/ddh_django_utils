@@ -14,15 +14,27 @@ repeating the example view code from the Django documentation.
 
 The ``ddh_utils_tags`` template tag library provides the
 ``display_pagination`` inclusion tag, which outputs the navigation for
-a set of results, based on the supplied page.
+a set of results, based on the supplied page::
+
+  {% load ddh_utils_tags %}
+  {% display_pagination querydict page %}
+
+This includes the template ``includes/pagination.html``.
+
 
 Haystack
 --------
 
 ``ddh_utils.views`` provides ``SearchView`` and ``FacetedSearchView``
-classes that have better pagination than those in Haystack's own
-views, and also add the request's GET parameters to the context for
-use in pagination and facetting.
+classes that have better pagination than those in Haystack's own views
+(making use of the ``create_pagination`` function), and also add the
+request's GET parameters to the context for use in pagination and
+facetting.
 
 ``ddh_util_tags`` provides simple tags for creating URLs by adding and
-removing facets.
+removing facets::
+
+  {% load ddh_utils_tags %}
+  <a href="{% add_facet_link querydict name value %}">Add</a>
+
+  <a href="{% remove_facet_link querydict "name:value" %}">Remove</a>
