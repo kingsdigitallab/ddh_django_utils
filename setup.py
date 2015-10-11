@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 
 setup(name='ddh_django_utils',
-      version = '0.9.3',
+      version = '0.9.4',
       description = 'Reusable Django app containing utilities for DDH projects',
       url = 'https://github.com/kcl-ddh/ddh_django_utils',
       author = 'Jamie Norrish',
